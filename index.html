@@ -29,6 +29,19 @@
         .then((data) => { 
           if (data.result) {
             gameInited = true;
+
+              vkBridge.send('VKWebAppShowBannerAd', {
+            banner_location: 'bottom',
+            can_close: false
+            })
+           .then((data) => { 
+              if (data.result) {
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+            
             console.log("GAME RESULT WAS INITED");
           } else {
              console.log("GAME RESULT INIT ERROR");
@@ -86,9 +99,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/BrickCrushVKBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ec795a82cf39bb6afb3b767c9156d672.data.unityweb",
-        frameworkUrl: buildUrl + "/e7519414fc821c897a6734d1fc23a3ec.js.unityweb",
-        codeUrl: buildUrl + "/7a1685eda7596ab44c8aa4efcf9634e9.wasm.unityweb",
+        dataUrl: buildUrl + "/e741bf870a7b27a7c25b9135c91c2087.data.unityweb",
+        frameworkUrl: buildUrl + "/07b8760c145433749a999de15581bf37.js.unityweb",
+        codeUrl: buildUrl + "/77b6594c30ebaf9ac1fa7bd00934055a.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Avlerm",
         productName: "Bricks And Balls Crusher",
