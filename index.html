@@ -55,7 +55,6 @@
     </script>
 
     <script>
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       canvas.addEventListener("touchstart", function(){
@@ -99,13 +98,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/BrickCrushVKBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/4a8503121786315404b201b8670dfe97.data.unityweb",
-        frameworkUrl: buildUrl + "/d1c719fc862810f4534c36b175cb05db.js.unityweb",
-        codeUrl: buildUrl + "/efc0f9e14da2ab2881b05f4bd41377cd.wasm.unityweb",
+        dataUrl: buildUrl + "/3af55ed459228785dbb9b6ba5331e7f9.data.unityweb",
+        frameworkUrl: buildUrl + "/378106a2e30764148f90fdb0e30bd44d.js.unityweb",
+        codeUrl: buildUrl + "/0c9eba9f07fe709e526805a19c568a89.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Avlerm",
         productName: "Bricks And Balls Crusher",
-        productVersion: "0.1",
+        productVersion: "1.6",
         showBanner: unityShowBanner,
       };
 
@@ -129,7 +128,6 @@
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-
         canvas.style.width = "100%";
         canvas.style.height = "100%";
       } else {
@@ -154,9 +152,7 @@
                 alert(message);
               });
             };
-
       document.body.appendChild(script);
-
     </script>
   </body>
 </html>
