@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 
-<script src="https://avlerm.ru/vksdk/browser.min.js"></script>
+    <script src="https://www.youtube.com/game_api/v1"></script>
 
   </head>
   <body>
@@ -21,38 +21,6 @@
       </div>
       <div id="unity-warning"> </div>
     </div>
-
-    <script>
-      var gameInited = false;
-
-      vkBridge.send('VKWebAppInit')
-        .then((data) => { 
-          if (data.result) {
-            gameInited = true;
-
-              vkBridge.send('VKWebAppShowBannerAd', {
-            banner_location: 'bottom',
-            can_close: false
-            })
-           .then((data) => { 
-              if (data.result) {
-              }
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-            
-            console.log("GAME RESULT WAS INITED");
-          } else {
-             console.log("GAME RESULT INIT ERROR");
-          }
-        })
-        .catch((error) => {
-          // Ошибка
-          console.log("GAME INIT ERROR");
-          console.log(error);
-        });
-    </script>
 
     <script>
       var container = document.querySelector("#unity-container");
@@ -96,15 +64,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/BrickCrushVKBuild.loader.js";
+      var loaderUrl = buildUrl + "/31785b0a9c87fee02b8f5c7f9d1dd0b6.loader.js";
       var config = {
-        dataUrl: buildUrl + "/e2a2b82aea6713f9355fcbb8c6131baf.data.unityweb",
-        frameworkUrl: buildUrl + "/6a427f32abaece417172082d59e2ccf4.js.unityweb",
-        codeUrl: buildUrl + "/e43f7ca61ce1262f76f9a08eb7b6438b.wasm.unityweb",
+        dataUrl: buildUrl + "/4ab8ec7a8a288c81937aacd79d8599b9.data.unityweb",
+        frameworkUrl: buildUrl + "/8bfb8a30548d6aba829aef4aa26f5d26.framework.js.unityweb",
+        codeUrl: buildUrl + "/430cc23b0cb474eb6e929b8bbd341ce2.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Avlerm",
         productName: "Bricks And Balls Crusher",
-        productVersion: "2.0",
+        productVersion: "1.0.0",
         showBanner: unityShowBanner,
       };
 
